@@ -2,7 +2,7 @@
 
 PRD.md §17「開発フェーズ」を実行可能なタスク単位に分解したもの。進捗の実体（Issue化・担当・期限）は [hum2music/tasks](https://github.com/hum2music/tasks) 側で管理し、本ファイルはフェーズの定義と完了条件のみを保持する。
 
-**現状：Phase 0 完了。Phase 1 未着手。**
+**現状：Phase 0・Phase 1 完了。Phase 2 未着手。**
 
 ---
 
@@ -26,16 +26,16 @@ PRD.md §17「開発フェーズ」を実行可能なタスク単位に分解し
 
 **Goal：メロディーからコード進行を提案できる。**
 
-- [ ] `packages/music-theory`（スケール・インターバル・コード理論プリミティブ）
-- [ ] 発音時刻からのBPM候補生成（倍/半テンポ考慮）
-- [ ] 拍への量子化（4分/8分/16分/付点/休符の比較選択）
-- [ ] 調性推定（長調/短調、複数候補＋信頼度）
-- [ ] コード候補生成（Major/Minor/Dom7/Maj7/Min7/Sus2/Sus4）
-- [ ] コード進行スコアリング（M, H, V, S）とDPによる全体探索
-- [ ] JSON中間出力（`--json`）
-- [ ] `hum2music analyze input.wav --chords` CLI実装
+- [x] `packages/music-theory`（スケール・インターバル・コード理論プリミティブ）
+- [x] 発音時刻からのBPM候補生成（倍/半テンポ考慮）
+- [x] 拍への量子化（4分/8分/16分/付点/休符の比較選択）
+- [x] 調性推定（長調/短調、複数候補＋信頼度）
+- [x] コード候補生成（Major/Minor/Dom7/Maj7/Min7/Sus2/Sus4）
+- [x] コード進行スコアリング（M, H, V, S）とDPによる全体探索（S項はPhase 5のスタイルプロファイルまで保留）
+- [x] JSON中間出力（`--json`）
+- [x] `hum2music analyze input.wav --chords` CLI実装
 
-**完了条件**：単純な既知コード進行を持つFixtureメロディーに対して、妥当なコード進行が再構成できること。
+**完了条件**：単純な既知コード進行を持つFixtureメロディーに対して、妥当なコード進行が再構成できること。✅ 達成（`tests/phase1/harmony.test.ts`のI-IV-V-I進行復元テストで確認。実装は`hum2music/hum2music`リポジトリのコミット`0dd0381..6ff5a6a`）。
 
 ## Phase 2：最小自動編曲（P0 MVP）
 
