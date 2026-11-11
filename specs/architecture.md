@@ -58,5 +58,5 @@ analysis     ▲            │          │
 ## なぜモジュール分割するか
 
 - 各工程を独立にテスト・差し替え可能にする（PRD §1.3 Modularity、§9.1 `InstrumentArranger`インターフェース）
-- 将来のGuitar Arranger追加（Phase 5）やスタイル追加時に、他モジュールへの影響を局所化する
+- 将来のGuitar Arranger追加やスタイル追加時に、他モジュールへの影響を局所化する
 - `music-theory`を薄く保つことで、将来の「Music Theory Optimization Engine」（PRD §20.2）が制約ソルバーとして差し替え可能になる

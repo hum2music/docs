@@ -15,13 +15,13 @@
   Track 4: Drums
   ```
 
-  ギター対応後（Phase 5）は追加トラックとして末尾に追加する。
+  ギター対応後は追加トラックとして末尾に追加する。
 
 - General MIDIプログラム番号の初期割当（提案値・要検証）：
   - Piano → Acoustic Grand Piano (#1)
   - Bass → Acoustic/Electric Bass (#33/#34)
   - Drums → GM Percussion Map固定（チャンネル10）
-  - Guitar（Phase 5）→ Acoustic/Electric Guitar系（スタイルに応じて選択）
+  - Guitar（将来）→ Acoustic/Electric Guitar系（スタイルに応じて選択）
 - ピッチベンドはチャンネル単位で作用するため、MVP（メロディー単旋律）では専用チャンネルでの単純なベンド適用に留める。複数音への独立ピッチ適用はMPE検討課題として[expression.md](./expression.md)に記載
 
 ## JSON

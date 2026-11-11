@@ -4,12 +4,12 @@
 
 ## コマンド一覧
 
-| コマンド | 説明 | 対応フェーズ |
-|---|---|---|
-| `hum2music transcribe <input.wav> -o <melody.mid>` | メロディー抽出とMIDI出力のみ | Phase 0 |
-| `hum2music analyze <input.wav> [--chords] [--json]` | 解析結果（BPM候補・調性・コード進行候補等）の表示/出力 | Phase 1 |
-| `hum2music generate <input.wav> [options] -o <song.mid>` | マルチトラック自動編曲 | Phase 2（MVP） |
-| `hum2music serve --port <port>` | localhost UI起動 | Phase 4 |
+| コマンド | 説明 |
+|---|---|
+| `hum2music transcribe <input.wav> -o <melody.mid>` | メロディー抽出とMIDI出力のみ |
+| `hum2music analyze <input.wav> [--chords] [--json]` | 解析結果（BPM候補・調性・コード進行候補等）の表示/出力 |
+| `hum2music generate <input.wav> [options] -o <song.mid>` | マルチトラック自動編曲（MVP） |
+| `hum2music serve --port <port>` | localhost UI起動 |
 
 ## オプション（抜粋・PRD §4.2, §8.4, §11.3準拠）
 
@@ -25,7 +25,7 @@
 | `--humanize <0-1>` | 演奏表現の統合パラメーター（楽器別パラメーターへ変換される） | P1 |
 | `--port <number>` | `serve`コマンドのポート指定 | P1 |
 
-初期CLIではファイル入力を必須とし、マイクからの直接録音対応はlocalhost UI（Phase 4）以降とする（PRD §4.2）。
+初期CLIではファイル入力を必須とし、マイクからの直接録音対応はlocalhost UI以降とする（PRD §4.2）。
 
 ## エラー処理方針（PRD §15.5）
 

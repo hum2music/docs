@@ -1,6 +1,6 @@
 # localhost UI Spec（完成系）
 
-対応：PRD §14。`apps/web`。Phase 4のスコープだが、本書は完成系（Phase 4完了時点）の仕様として記述する。
+対応：PRD §14。`apps/web`。将来のスコープだが、本書は完成系の仕様として記述する。
 
 ## 目的
 
@@ -44,7 +44,7 @@ hum2music serve --port 3000
 
 - MIDIダウンロード（マルチトラックSMF、[export.md](./export.md)）
 - JSONダウンロード（`Composition`全体、または工程別の中間JSON）
-- WAVダウンロード（P1／Phase 5。MIDIレンダリング結果）
+- WAVダウンロード（将来。MIDIレンダリング結果）
 
 ## バックエンドAPI方針
 
