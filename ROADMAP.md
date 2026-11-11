@@ -2,7 +2,7 @@
 
 PRD.md §17「開発フェーズ」を実行可能なタスク単位に分解したもの。進捗の実体（Issue化・担当・期限）は [hum2music/tasks](https://github.com/hum2music/tasks) 側で管理し、本ファイルはフェーズの定義と完了条件のみを保持する。
 
-**現状：全フェーズ未着手（コードベースなし、計画段階）。**
+**現状：Phase 0 完了。Phase 1 未着手。**
 
 ---
 
@@ -10,17 +10,17 @@ PRD.md §17「開発フェーズ」を実行可能なタスク単位に分解し
 
 **Goal：鼻歌のメロディーをMIDIに変換できる。**
 
-- [ ] Bun workspaceの初期化（`apps/cli`, `packages/core`, `packages/audio-analysis`, `packages/midi`）
-- [ ] WAV/PCMデコード・モノラル化
-- [ ] YINによる基本周波数推定
-- [ ] 周波数→MIDIノート番号変換（セント偏差保持）
-- [ ] 発音区間（ノート境界）推定
-- [ ] 短時間異常ピッチ除外・ピッチ軌跡平滑化
-- [ ] Standard MIDI File出力（単一メロディートラック）
-- [ ] `hum2music transcribe input.wav -o melody.mid` CLI実装
-- [ ] 合成音声Fixture（C4単音、Cメジャースケール、ビブラート等）とテスト
+- [x] Bun workspaceの初期化（`apps/cli`, `packages/core`, `packages/audio-analysis`, `packages/midi`）
+- [x] WAV/PCMデコード・モノラル化
+- [x] YINによる基本周波数推定
+- [x] 周波数→MIDIノート番号変換（セント偏差保持）
+- [x] 発音区間（ノート境界）推定
+- [x] 短時間異常ピッチ除外・ピッチ軌跡平滑化
+- [x] Standard MIDI File出力（単一メロディートラック）
+- [x] `hum2music transcribe input.wav -o melody.mid` CLI実装
+- [x] 合成音声Fixture（C4単音、Cメジャースケール、ビブラート等）とテスト
 
-**完了条件**：Fixtureに対してPitch Accuracy / Note Onset Error / Note Duration Errorが許容範囲内であること（具体的閾値は実装時にベンチマークして確定する）。
+**完了条件**：Fixtureに対してPitch Accuracy / Note Onset Error / Note Duration Errorが許容範囲内であること（具体的閾値は実装時にベンチマークして確定する）。✅ 達成（`tests/phase0/` 配下、19件のテストがpass。実装は`hum2music/hum2music`リポジトリのコミット`5b707c3..ea44aaa`）。
 
 ## Phase 1：和声の推定
 
