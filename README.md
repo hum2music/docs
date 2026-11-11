@@ -10,6 +10,7 @@
 
 | ファイル | 内容 |
 |---|---|
+| [SPECIFICATION.md](./SPECIFICATION.md) | **完成系（Phase 0〜5完了時点）の統合技術仕様書・最終受け入れ基準** |
 | [ROADMAP.md](./ROADMAP.md) | Phase 0〜5のタスク分解・マイルストーン・進捗 |
 | [specs/architecture.md](./specs/architecture.md) | モノレポ構成・パッケージ責務・依存関係 |
 | [specs/data-model.md](./specs/data-model.md) | パイプライン中間データ型・JSONスキーマ方針 |
@@ -21,6 +22,9 @@
 | [specs/expression.md](./specs/expression.md) | Humanization / Expression Engine |
 | [specs/export.md](./specs/export.md) | MIDI/JSON/WAV出力仕様 |
 | [specs/cli.md](./specs/cli.md) | CLIコマンド・オプション・エラー方針 |
+| [specs/ui.md](./specs/ui.md) | localhost UI(完成系)仕様 |
+| [specs/style-profiles.md](./specs/style-profiles.md) | スタイルプロファイルによる横断的パラメーター調整 |
+| [specs/non-functional.md](./specs/non-functional.md) | 非機能要件(再現性・性能・オフライン・テスト容易性・エラー処理)の統合 |
 
 ## 仕様のステータス表記
 
